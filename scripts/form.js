@@ -12,7 +12,8 @@ const NameValidation = (element)=>{
     }
 }
 
-const removeReuired = (element, e) => {
+const removeRequired = (element, e) => {
+    
     let length = e.target.value.length
 
     if (length > 0) {
@@ -22,9 +23,21 @@ const removeReuired = (element, e) => {
         element.classList.add("input_required")
         element.classList.remove("unactive")
     }
+
 }
 
-const sendDataToTelegram = (data)=>{
+const addRequired = (elementClass) => {
+    let element = document.querySelector(elementClass)
+
+    if (element.classList.contains("unactive")) [
+        element.classList.remove("unactive")
+    ]
+
+    element.classList.add("input_required")
+}
+
+const sendDataToTelegram = (data) => {
+
     fetch(`https://api.telegram.org/bot7167208214:AAHTpUVBibHVc0RksnxtgAUGqspxdwdK6WE/sendMessage`, {
     method: 'POST',
     headers: {
@@ -62,14 +75,14 @@ const checkCookie = (name) => {
     return null
 }
 
-const getExpirationDate = (name) => {
-
-}
-
-const clearData = (elements)=>{
+const clearData = (elements, requiredClasses)=>{
     elements.map((el)=>{
         el.value = null
     })
+
+    for (let i = 0; i < requiredClasses.length; i++) {
+        addRequired(requiredClasses[i])
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -93,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let cookie = checkCookie("ordered");
 
         if (cookie) {
-            let expirationDate = 
             alert(`Ви вже оформили замовлення ! Наступне буде доступне з завтрашнього дня.`)
             return;
         }
@@ -103,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const message = TEXT_AREA.value
 
         localStorage.setItem('ordered', true)
-        clearData([NAME_INPUT, PHONE_INPUT, TEXT_AREA])
+        clearData([NAME_INPUT, PHONE_INPUT, TEXT_AREA], ['.required_input-name', '.required_input-phone'])
 
         setCookie("ordered", true, 1)
 

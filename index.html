@@ -22,10 +22,10 @@
 
             <form id="order__container_form">
                 <label for="order__container_form_inputName">Ваше ім'я: <span class="required_input-name input_required">*</span></label>
-                <input required type="text" id="order__container_form_inputName" oninput="removeReuired(document.querySelector('.required_input-name'), event)">
+                <input required type="text" id="order__container_form_inputName" oninput="removeRequired(document.querySelector('.required_input-name'), event)">
                 
                 <label for="order__container_form_inputPhone">Ваш номер телефону: <span class="required_input-phone input_required">*</span></label>
-                <input required type="text" id="order__container_form_inputPhone" placeholder="+380 (000) 000-0000" oninput="removeReuired(document.querySelector('.required_input-phone'), event)">
+                <input required type="text" id="order__container_form_inputPhone" placeholder="+380 (000) 000-0000" oninput="removeRequired(document.querySelector('.required_input-phone'), event)">
 
                 <label for="order__container_form_textArea">Примітки</label>
                 <textarea id="order__container_form_textArea" cols="30" rows="8"></textarea>
