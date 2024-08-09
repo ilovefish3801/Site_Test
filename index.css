@@ -2,11 +2,15 @@
     --gradient: linear-gradient(90deg, #329955 20%, #1F6934 50%);
 }
 
+.bodyActive{
+    overflow-y: hidden;
+}
 
 .body{
     margin: 0px !important;
     padding: 0px !important;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
 }
 
 .container{
@@ -138,6 +142,482 @@
     }
 }
 
+.active{
+    display: flex !important;
+}
+
+.unactive{
+    display: none;
+}
+
+.order{
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+
+    justify-content: center;
+    align-items: center;
+
+    .input_required{
+        display: inline;
+        color: rgb(224, 0, 0);
+    }
+
+    .order__container{
+        border-radius: 15px;
+
+        position: relative;
+
+        width: 500px;
+        height: 500px;
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .order__container_quitBtn{
+            position: absolute;
+
+            right: 12px;
+            top: 10px;
+
+            width: 20px;
+            height: 20px;
+
+            border: none;
+            font-size: 30px;
+
+            background-color: white;
+
+            background-image: url('assets/quitBtn.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            cursor: pointer;
+        }
+
+        .order__container_title{
+            margin: 0px;
+        }
+
+        #order__container_form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            width: 400px;
+
+            margin-top: 40px;
+            
+            label{
+                margin-left: 10px;
+                margin-bottom: 5px;
+            }
+
+            input{
+                margin-bottom: 14px;
+
+                background-color: #E8E8E8;
+
+                border: none;
+                border-radius: 10px;
+
+                height: 34px;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button{
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input[type=number] {
+                -moz-appearance: textfield;
+              }
+
+            input:focus{
+                border: 2px solid #236ffd;
+
+                padding: 10px;
+
+                outline: none;
+
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            textarea{
+                border: none;
+                border-radius: 0px;
+                resize: none;
+
+                min-width: 400px;
+
+                background-color: #E8E8E8;
+
+                border-radius: 10px;
+            }
+
+            textarea:focus{
+                padding: 10px;
+
+                outline: none;
+
+                border: 2px solid #236ffd;
+
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            #order__container_form_inputName{
+
+            }
+
+            #order__container_form_inputPhone{
+
+            }
+
+            #order__container_form_textArea{
+
+            }
+
+            .order__container_form_submitContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin-top: 20px;
+
+                border-radius: 7px;
+
+                #order__container_form_submitContainer_inputSubmit{
+                    width: 200px;
+                    height: 40px;
+
+                    color: white;
+
+                    background: var(--gradient);
+
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .order{
+        display: none;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    
+        justify-content: center;
+        align-items: center;
+    
+        .input_required{
+            display: inline;
+            color: rgb(224, 0, 0);
+        }
+    
+        .order__container{
+            border-radius: 15px;
+    
+            position: relative;
+    
+            width: 400px;
+            height: 500px;
+            background-color: white;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .order__container_quitBtn{
+                position: absolute;
+    
+                right: 12px;
+                top: 10px;
+    
+                width: 20px;
+                height: 20px;
+    
+                border: none;
+                font-size: 30px;
+    
+                background-color: white;
+    
+                background-image: url('assets/quitBtn.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+    
+                cursor: pointer;
+            }
+    
+            .order__container_title{
+                margin: 0px;
+            }
+    
+            #order__container_form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+                width: 400px;
+    
+                margin-top: 40px;
+                
+                label{
+                    margin-left: 10px;
+                    margin-bottom: 5px;
+                }
+    
+                input{
+                    margin-bottom: 14px;
+    
+                    background-color: #E8E8E8;
+    
+                    border: none;
+                    border-radius: 10px;
+    
+                    height: 34px;
+
+                    min-width: 200px;
+                    max-width: 200px;
+                }
+    
+                textarea{
+                    border: none;
+                    border-radius: 0px;
+                    resize: none;
+    
+                    min-width: 200px;
+                    max-width: 200px;
+    
+                    background-color: #E8E8E8;
+    
+                    border-radius: 10px;
+                }
+    
+                textarea:focus{
+                    padding: 10px;
+    
+                    outline: none;
+    
+                    border: 2px solid #236ffd;
+    
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+    
+                #order__container_form_inputName{
+    
+                }
+    
+                #order__container_form_inputPhone{
+    
+                }
+    
+                #order__container_form_textArea{
+    
+                }
+    
+                .order__container_form_submitContainer{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    margin-top: 20px;
+    
+                    border-radius: 7px;
+    
+                    #order__container_form_submitContainer_inputSubmit{
+                        width: 200px;
+                        height: 40px;
+    
+                        color: white;
+    
+                        background: var(--gradient);
+    
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .order{
+        display: none;
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    
+        justify-content: center;
+        align-items: center;
+    
+        .input_required{
+            display: inline;
+            color: rgb(224, 0, 0);
+        }
+    
+        .order__container{
+            border-radius: 15px;
+    
+            position: relative;
+    
+            width: 300px;
+            height: 500px;
+            background-color: white;
+    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .order__container_quitBtn{
+                position: absolute;
+    
+                right: 12px;
+                top: 10px;
+    
+                width: 20px;
+                height: 20px;
+                max-width: 20px;
+                max-height: 20px;
+    
+                border: none;
+                font-size: 10px;
+    
+                background-color: white;
+    
+                background-image: url('assets/quitBtn.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+    
+                cursor: pointer;
+            }
+    
+            .order__container_title{
+                margin: 0px;
+
+                font-size: 20px !important;
+            }
+    
+            #order__container_form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+                width: 400px;
+    
+                margin-top: 40px;
+                
+                label{
+                    margin-left: 10px;
+                    margin-bottom: 5px;
+                }
+    
+                input{
+                    margin-bottom: 14px;
+    
+                    background-color: #E8E8E8;
+    
+                    border: none;
+                    border-radius: 10px;
+    
+                    height: 34px;
+
+                    min-width: 200px;
+                    max-width: 200px;
+                }
+    
+                textarea{
+                    border: none;
+                    border-radius: 0px;
+                    resize: none;
+    
+                    min-width: 200px;
+                    max-width: 200px;
+    
+                    background-color: #E8E8E8;
+    
+                    border-radius: 10px;
+                }
+    
+                textarea:focus{
+                    padding: 10px;
+    
+                    outline: none;
+    
+                    border: 2px solid #236ffd;
+    
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+    
+                #order__container_form_inputName{
+    
+                }
+    
+                #order__container_form_inputPhone{
+    
+                }
+    
+                #order__container_form_textArea{
+    
+                }
+    
+                .order__container_form_submitContainer{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+    
+                    margin-top: 20px;
+    
+                    border-radius: 7px;
+    
+                    #order__container_form_submitContainer_inputSubmit{
+                        width: 200px;
+                        height: 40px;
+    
+                        color: white;
+    
+                        background: var(--gradient);
+    
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .main{
     margin-top: 50px;
     .main__hero{
@@ -232,6 +712,7 @@
         .main__hero_info{
             margin-left: 40px;
 
+            background-color: white;
 
             display: flex;
             flex-direction: column;
@@ -373,6 +854,8 @@
             max-width: 300px;
 
             margin-left: 20px;
+
+            padding-bottom: 25px !important;
 
             h2{
                 font-weight: 500;
