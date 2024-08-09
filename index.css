@@ -1146,6 +1146,16 @@
         }
     }
 
+    .footer__gmail{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+
+        right: 0;
+
+        text-decoration: none;
+    }
+
     .footer__socials{
         display: flex;
         justify-content: center;
@@ -1206,11 +1216,11 @@
     
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .footer{
         flex-direction: column-reverse;
 
-        height: 200px;
+        height: 230px;
         
         .footer__logo{
             position: static !important;
@@ -1219,6 +1229,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            max-height: 40px;
 
             .footer__logo_link{
                 margin-top: 30px;
@@ -1233,6 +1245,13 @@
             .footer__logo_text{
                 margin: 0px !important;
             }
+        }
+
+        .footer__gmail{
+            position: static;
+
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     }
 }
