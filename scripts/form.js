@@ -31,7 +31,7 @@ const sendDataToTelegram = (data)=>{
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      chat_id: '6148293963',
+      chat_id: '1367124710',
       text: `Ім'я: ${data.name} \nНомер телефону: +380 ${data.phone} \nПримітка: ${data.message === '' ? "Немає" : data.message}`,
         
 })
