@@ -749,8 +749,10 @@ body.bodyActive{
             }
 
             .main__hero_info_price{
-                font-size: 25px;
+                font-size: 20px;
                 margin-bottom: 10px;
+
+                font-weight: 500;
             }
 
             .main__hero_info_desc{

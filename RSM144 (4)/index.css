@@ -754,8 +754,10 @@ body.bodyActive{
             }
 
             .main__hero_info_price{
-                font-size: 25px;
+                font-size: 20px;
                 margin-bottom: 10px;
+
+                font-weight: 500;
             }
 
             .main__hero_info_desc{
@@ -949,6 +951,10 @@ body.bodyActive{
     }
 
     @media screen and (max-width: 650px) {
+        .main__hero_info_price{
+            font-size: 18px !important;
+        }
+
         .main__info{
             display: flex;
             justify-content: center;
