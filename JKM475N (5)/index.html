@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <title>Green Wat</title>
+    <link rel="icon" href="assets/logo.png">
+</head>
+<body class="body">
+    <header class="header container">
+        <a href="#" class="header__logo"><div class="header__logo_photo"></div></a>
+    </header>
+    
+    <section class="order" onclick="CloseOrderMenu(event)">
+        <div class="order__container">
+            <button class="order__container_quitBtn" onclick="CloseOrderMenu(event)">
+            </button>
+
+            <h2 class="order__container_title" style="font-weight: 400;">Оформлення замовлення</h2>
+
+            <form id="order__container_form">
+                <label for="order__container_form_inputName">Ваше ім'я: <span class="required_input-name input_required">*</span></label>
+                <input required type="text" id="order__container_form_inputName" oninput="removeRequired(document.querySelector('.required_input-name'), event)">
+                
+                <label for="order__container_form_inputPhone">Ваш номер телефону: <span class="required_input-phone input_required">*</span></label>
+                <input required type="text" id="order__container_form_inputPhone" placeholder="+380 (000) 000-0000" oninput="removeRequired(document.querySelector('.required_input-phone'), event)">
+
+                <label for="order__container_form_textArea">Примітки</label>
+                <textarea id="order__container_form_textArea" cols="30" rows="8"></textarea>
+
+                <div class="order__container_form_submitContainer">
+                    <input type="submit" id="order__container_form_submitContainer_inputSubmit" value="Надіслати">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <main class="main container">
+        <div class="main__hero">
+            <div class="main__hero_preview">
+                <div class="main__hero_preview_title">
+                    Сонячна панель Jinko Solar
+                </div>
+                <div class="main__hero_preview_voltage">
+                    475W-480W
+                </div>
+                <div class="main__hero_preview_photo">
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                          <!-- Slides -->
+                          <div class="swiper-slide panel">
+                            <img src="assets/solar_panel1.png" alt="">
+                          </div>
+                          <div class="swiper-slide panel-smaller">
+                            <img src="assets/solar_panel2.png" alt="">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="assets/blackLogo.png" alt="">
+                          </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev">
+                            <div class="swiper-button-prev-arrow"></div>
+                        </div>
+                        <div class="swiper-button-next">
+                            <div class="swiper-button-next-arrow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+            </div>
+            
+            <div class="main__hero_info">
+                <div class="main__hero_info_title">
+                    Jinko Solar 475<span class="main__hero_info_title_model">JKM475N-60HL4-V BF</span>
+                </div>
+                
+                <div class="main__hero_info_hr">
+
+                </div>
+
+                <div class="main__hero_info_price">
+                    5499₴
+                </div>
+
+                <div class="main__hero_info_desc">
+                    Сонячна панель Jinko Solar JKM475N-60HL4-V N-типу 475 Вт – це високоефективний фотомодуль, призначений для перетворення сонячної енергії в електрику. Ця панель використовує передові технології, забезпечуючи стабільну продуктивність та надійність протягом тривалого часу. Номінальна потужність панелі становить 475 Вт, що робить її придатною для різних типів сонячних установок, як домашніх, так і комерційних. Завдяки своїй високій ефективності та стійкості до зовнішніх факторів, панель Jinko Solar JKM475N-60HL4-V є відмінним вибором для стабільного генерування електроенергії.
+                </div>
+
+                <div class="main__hero_info_buttons">
+                    <button class="main__hero_info_buttons_order" onclick="OpenOrderMenu()">
+                        Оформити замовлення
+                    </button>
+    
+                    <button class="main__hero_info_buttons_download">
+                        <a href="pdfs/CORAB ENCOR EC455M-10-120S 1500V HALF CUT.pdf" target="_blank" style="text-decoration: none; color: white;">
+                            <div class="main__hero_info_buttons_download_text">
+                                Завантажити PDF файл
+                            </div>
+                        </a>
+                        <div class="main__hero_info_buttons_download_photo"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main__info">
+            <div class="main__info_desc text_container">
+                <p class="main__info_desc_text">Сонячна панель Jinko Solar JKM475N-60HL4-V
+                </p>
+                <p class="main__info_desc_text">
+                    Сонячна панель Jinko Solar JKM475N-60HL4-V є високоефективним та надійним рішенням для перетворення сонячної енергії в електрику. Завдяки передовій технології Half-Cell, яка розділяє сонячні елементи на дві частини, панель зменшує внутрішні втрати енергії та підвищує загальну ефективність. Номінальна потужність модуля становить 475 Вт, що робить його придатним для різних типів сонячних установок, як для домашнього, так і для комерційного використання.
+                </p>
+                <p class="main__info_desc_text">Максимальна напруга системи сягає 1500 В, що дозволяє використовувати панель у високовольтних системах, знижуючи витрати на кабелі та інші компоненти. Висока ефективність панелі досягає 21,16%, що забезпечує стабільну продуктивність навіть у складних кліматичних умовах. Температурний коефіцієнт потужності становить -0.30%/°C, що гарантує надійну роботу панелі при високих температурах.
+                </p>
+                <p class="main__info_desc_text">Конструкція панелі міцна та надійна, здатна витримувати високі навантаження, такі як сніг до 5400 Па та вітер до 2400 Па. Завдяки цьому, панель має довгий термін служби і є стійкою до впливу зовнішніх факторів. Розміри панелі становлять 2094 мм x 1038 мм x 35 мм, а вага - 25,5 кг, що робить її компактною та легкою в установці.</p>
+                <p class="main__info_desc_text">
+                    Конструкція панелі є міцною та стійкою до зовнішніх факторів, таких як сніг до 5400 Па та вітер до 2400 Па. Розміри панелі становлять 1903 мм x 1134 мм x 30 мм, а вага - 25,2 кг, що робить її зручною в установці. Ця сонячна панель є оптимальним вибором для створення ефективних та надійних сонячних електростанцій з мінімальними експлуатаційними витратами.</p>
+            </div>
+
+            <div class="main__info_specs text_container">
+                <h2 class="main__info_specs_title">Технічні дані:</h2>
+                <p class="main__info_specs_text">- Номінальна потужність: 475 Вт</p>
+                <p class="main__info_specs_text">- Технологія: N-type</p>
+                <p class="main__info_specs_text">- Кількість комірок: 120 (Half-Cell)</p>
+                <p class="main__info_specs_text">- Максимальна напруга системи: 1500 В</p>
+                <p class="main__info_specs_text">- Температурний коефіцієнт потужності: -0.30%/°C</p>
+                <p class="main__info_specs_text">- Ефективність модуля: приблизно 21,16%</p>
+                <p class="main__info_specs_text">- Робоча температура: від -40°C до +85°C</p>
+                <p class="main__info_specs_text">- Допустиме навантаження: до 5400 Па (сніг), до 2400 Па (вітер)</p>
+                <p class="main__info_specs_text">- Розміри: 1903 мм x 1134 мм x 30 мм</p>
+                <p class="main__info_specs_text">- Вага: 25,2 кг</p>
+            </div>
+        </div>
+    
+    </main>
+    
+    <footer class="footer container">
+        <div class="footer__logo container">
+            <a href="#" class="footer__logo_link"><div class="footer__logo_link_photo"></div></a>
+            <div class="footer__logo_text">© GreenWat 2024</div>
+        </div>
+
+        <a href="https://mail.google.com/mail/u/0/#search/greenwatua%40gmail.com?compose=new" target="_blank" class="footer__gmail container">greenwatua@gmail.com</a>
+
+        <nav class="footer__socials">
+            <a href="https://www.instagram.com/greenwatua/" target="_blank" class="footer__socials_instagram"><div class="footer__socials_instagram_photo"></div></a>
+            <a href="https://www.facebook.com/profile.php?id=61564119568265" target="_blank" class="footer__socials_facebook"><div class="footer__socials_facebook_photo"></div></a>
+            <a href="https://www.tiktok.com/@greenwatua?lang=uk-UA" target="_blank" class="footer__socials_tiktok"><div class="footer__socials_tiktok_photo"></div></a>
+        </nav>
+
+    </footer>
+</body>
+</html>
+
+<script src="scripts/form.js"></script>
+<script src="scripts/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
